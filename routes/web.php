@@ -108,6 +108,8 @@ Route::get('/change-password','Auth\ChangePasswordController@index')->name('pass
 
 Route::post('/change-password','Auth\ChangePasswordController@changePassword')->name('password.update');
 
+Route::get('/profile','ProfileController@index')->name('profile.index');
+
 /*
 
 Route::get('/memberarea', function () {
