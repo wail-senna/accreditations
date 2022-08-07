@@ -536,7 +536,7 @@ main{
 							<i class="fa fa-info-circle"></i>
 						</span>
 						<div class="desc">
-							<h3><a href="#">Guides d'utilisation</a></h3>
+							<h3><a href="admin/#">Guides d'utilisation</a></h3>
 							<p>Vous allez trouver ici les guides d'utilisation de cette plateforme qui gére la création des initiateurs et des coordonnateurs et qui gére les demandes d'accréditation.</p>
 						</div>
 					</div>
@@ -547,7 +547,7 @@ main{
 							<i class="fa fa-sticky-note-o"></i>
 						</span>
 						<div class="desc">
-							<h3><a href="#">Textes juridiques</a></h3>
+							<h3><a href="admin/#">Textes juridiques</a></h3>
 							<p>Vous allez trouver ici les textes juridiques privés et publics de l'Université Sidi Mohamed Ben Abdellah.</p>
 						</div>
 					</div>

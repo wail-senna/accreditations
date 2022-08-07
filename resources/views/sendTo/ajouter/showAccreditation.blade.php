@@ -420,20 +420,23 @@ h3.title{
               </div>
 
               <ul class="dropdown-menu">
-                  <li>
-                      <a href="{{ route('password.change') }}">Change Password</a>
-                  </li>
-                  <li>
-                      <a href="{{ route('logout') }}"
-                          onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
-                          Logout
-                      </a>
+                <li>
+                    <a href="{{ route('profile.index') }}">Profile</a>
+                </li>
+                <li>
+                    <a href="{{ route('password.change') }}">Change Password</a>
+                </li>
+                <li>
+                    <a href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                  document.getElementById('logout-form').submit();">
+                        Logout
+                    </a>
 
-                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                          {{ csrf_field() }}
-                      </form>
-                  </li>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
+                </li>
               </ul>
             </div>
             <!----><!---->
@@ -453,89 +456,91 @@ h3.title{
                 
                 <div class="row">
                     <div class="col-md-8 offset-md-2">
-                                    <h3>Etablissement</h3>
-                                    <h5 style="color:blue; margin-left:10px;">{{ $accreditation -> etablissement }}</h5>
+                      <div class="row justify-content-center w-75 m-auto pb-2">
+                        <label class="pe-3 align-self-center mb-0 w-25">Etablissement : </label><input type="text" class="form-control w-50" value="{{ $accreditation -> etablissement }}" disabled>
+                      </div>
+                      <div class="row justify-content-center w-75 m-auto pb-2">
+                        <label class="pe-3 align-self-center mb-0 w-25">Coordonnateur : </label><input type="text" class="form-control w-50" value="{{ $accreditation -> coordonnateur }}" disabled>
+                      </div>
+                      <div class="row justify-content-center w-75 m-auto pb-2">
+                        <label class="pe-3 align-self-center mb-0 w-25">Diplome : </label><input type="text" class="form-control w-50" value="{{ $accreditation -> diplome }}" disabled>
+                      </div>
+                      <div class="row justify-content-center w-75 m-auto pb-2">
+                        <label class="pe-3 align-self-center mb-0 w-25">Langue : </label><input type="text" class="form-control w-50" value="{{ $accreditation -> langue }}" disabled>
+                      </div>    
+                      <div class="row justify-content-center w-75 m-auto pb-2">
+                        <label class="pe-3 align-self-center mb-0 w-25">Intitulé de la filière en francais : </label><input type="text" class="form-control w-50" value="{{ $accreditation -> intitule_fr }}" disabled>
+                      </div>  
+                      <div class="row justify-content-center w-75 m-auto pb-2">
+                        <label class="pe-3 align-self-center mb-0 w-25">Intitulé de la filière en arabe : </label><input type="text" class="form-control w-50" value="{{ $accreditation -> intitule_ar }}" disabled>
+                      </div>  
+                      <div class="row justify-content-center w-75 m-auto pb-2">
+                        <label class="pe-3 align-self-center mb-0 w-25">Intitulé de la filière en anglais : </label><input type="text" class="form-control w-50" value="{{ $accreditation -> intitule_an }}" disabled>
+                      </div>
+                      <div class="row justify-content-center w-75 m-auto pb-2">
+                        <label class="pe-3 align-self-center mb-0 w-25">La filière prévoit-elle un tronc commun harmonisé : </label><input type="text" class="form-control w-50" value="{{ $accreditation -> tronc_commun }}" disabled>
+                      </div>
+                      <div class="row justify-content-center w-75 m-auto pb-2">
+                        <label class="pe-3 align-self-center mb-0 w-25">Champ Disciplinaire : </label><input type="text" class="form-control w-50" value="{{ $accreditation -> champ_disciplinaire }}" disabled>
+                      </div>  
+                      <div class="row justify-content-center w-75 m-auto pb-2">
+                        <label class="pe-3 align-self-center mb-0 w-25">Domaine : </label><input type="text" class="form-control w-50" value="{{ $accreditation -> domaine }}" disabled>
+                      </div>  
+                      <div class="row justify-content-center w-75 m-auto pb-2">
+                        <label class="pe-3 align-self-center mb-0 w-25">Discipline : </label><input type="text" class="form-control w-50" value="{{ $accreditation -> discipline }}" disabled>
+                      </div> 
+                      <div class="row justify-content-center w-75 m-auto pb-2">
+                        <label class="pe-3 align-self-center mb-0 w-25">mots clés : </label><input type="text" class="form-control w-50" value="{{ $accreditation -> mots_cles }}" disabled>
+                      </div> 
+                      <div class="row justify-content-center w-75 m-auto pb-2">
+                        <label class="pe-3 align-self-center mb-0 w-25">Mode d'enseignement : </label><input type="text" class="form-control w-50" value="{{ $accreditation -> mode_enseignement }}" disabled>
+                      </div> 
+                      <div class="row justify-content-center w-75 m-auto pb-2">
+                        <label class="pe-3 align-self-center mb-0 w-25">SÉRIES DE BAC REQUISES : </label><input type="text" class="form-control w-50" value="{{ $accreditation -> series_bac }}" disabled>
+                      </div> 
+                      <div class="row justify-content-center w-75 m-auto pb-2">
+                        <label class="pe-3 align-self-center mb-0 w-25">MATIÈRES PRINCIPALES REQUISES : </label><input type="text" class="form-control w-50" value="{{ $accreditation -> matieres_principales }}" disabled>
+                      </div> 
+                      <div class="row justify-content-center w-75 m-auto pb-2">
+                        <label class="pe-3 align-self-center mb-0 w-25">Prérequis pédagogiques de la filière : </label><input type="text" class="form-control w-50" value="{{ $accreditation -> prerequis_pedagogiques }}" disabled>
+                      </div> 
+                      <div class="row justify-content-center w-75 m-auto pb-2">
+                        <label class="pe-3 align-self-center mb-0 w-25">Préciser les critères de sélection : </label><input type="text" class="form-control w-50" value="{{ $accreditation -> criteres_selections1 }}" disabled>
+                      </div> 
 
-                                    <h3>Coordonnateur</h3>
-                                    <h5 style="color:blue; margin-left:10px;">{{ $accreditation -> coordonnateur }}</h5>
+                      <hr><h4 style="color:#3097d1;">ACCÈS VIA LES PASSERELLES</h4><hr>
 
-                                    <h3>Diplome</h3>
-                                    <h5 style="color:blue; margin-left:10px;">{{ $accreditation -> diplome }}</h5>
-
-                                    <h3>langue</h3>
-                                    <h5 style="color:blue; margin-left:10px;">{{ $accreditation -> langue }}</h5>
-
-                                    <h3>Intitulé de la filière en francais</h3>
-                                    <h5 style="color:blue; margin-left:10px;">{{ $accreditation -> intitule_fr }}</h5>
-
-                                    <h3>Intitulé de la filière en arabe</h3>
-                                    <h5 style="color:blue; margin-left:10px;">{{ $accreditation -> intitule_ar }}</h5>
-
-                                    <h3>Intitulé de la filière en anglais</h3>
-                                    <h5 style="color:blue; margin-left:10px;">{{ $accreditation -> intitule_an }}</h5>
-
-                                    <h3>La filière prévoit-elle un tronc commun harmonisé</h3>
-                                    <h5 style="color:blue; margin-left:10px;">{{ $accreditation -> tronc_commun }}</h5>
-
-                                    <h3>Champ Disciplinaire</h3>
-                                    <h5 style="color:blue; margin-left:10px;">{{ $accreditation -> champ_disciplinaire }}</h5>
-
-                                    <h3>Domaine</h3>
-                                    <h5 style="color:blue; margin-left:10px;">{{ $accreditation -> domaine }}</h5>
-
-                                    <h3>Discipline</h2>
-                                    <h5 style="color:blue; margin-left:10px;">{{ $accreditation -> discipline }}</h5>
-
-                                    <h2>mots clés</h2>
-                                    <h5 style="color:blue; margin-left:10px;">{{ $accreditation -> mots_cles }}</h5>
-
-                                    <h2>MODE D'ENSEIGNEMENT</h2>
-                                    <h5 style="color:blue; margin-left:10px;">{{ $accreditation -> mode_enseignement }}</h5>
-
-                                    <h2>SÉRIES DE BAC REQUISES</h2>
-                                    <h5 style="color:blue; margin-left:10px;">{{ $accreditation -> series_bac }}</h5>
-
-                                    <h2>MATIÈRES PRINCIPALES REQUISES</h2>
-                                    <h5 style="color:blue; margin-left:10px;">{{ $accreditation -> matieres_principales }}</h5>
-
-                                    <h2>Prérequis pédagogiques de la filière</h2>
-                                    <h5 style="color:blue; margin-left:10px;">{{ $accreditation -> prerequis_pedagogiques }}</h5>
-
-                                    <h2>Préciser les critères de sélection</h2>
-                                    <h5 style="color:blue; margin-left:10px;">{{ $accreditation -> criteres_selections1 }}</h5>
-                                    
-                                    <hr><h4 style="color:#3097d1;">ACCÈS VIA LES PASSERELLES</h4><hr>
-                                    <h2>CONDITIONS D'ACCÈS</h3>
-                                    <h5 style="color:blue; margin-left:10px;">{{ $accreditation -> conditions_acces }}</h5>
-
-                                    <h3>Préciser les critères de sélection</h3>
-                                    <h5 style="color:blue; margin-left:10px;">{{ $accreditation -> criteres_selections2 }}</h5>
-
-                                    <hr><h4 style="color:#3097d1;">OBJECTIFS, COMPÉTENCES ET DÉBOUCHÉS DE LA FORMATION</h4><hr>
-                                    <h3>OBJECTIFS DE LA FORMATION</h3>
-                                    <h5 style="color:blue; margin-left:10px;">{{ $accreditation -> objectifs_formation }}</h5>
-
-                                    <h3>COMPÉTENCES À ACQUÉRIR</h3>
-                                    <h5 style="color:blue; margin-left:10px;">{{ $accreditation -> competences }}</h5>
-
-                                    <h3>DÉBOUCHÉS DE LA FORMATION</h3>
-                                    <h5 style="color:blue; margin-left:10px;">{{ $accreditation -> debouches_formation }}</h5>
-
-                                    <h3>ARTICULATION DE LA FILIÈRE AVEC LES AUTRES FORMATIONS</h3>
-                                    <h5 style="color:blue; margin-left:10px;">{{ $accreditation -> articulation_filiere }}</h5>
-
-                                    <hr><h4 style="color:#3097d1;">STRATÉGIES SECTORIELLES</h4><hr>
-                                    <h3>La filière s’inscrit-elle dans le cadre d’une stratégie nationale sectorielle?</h3>
-                                    <h5 style="color:blue; margin-left:10px;">{{ $accreditation -> strategies_sectorielles }}</h5>
-
-                                    <hr><h4 style="color:#3097d1;">COOPÉRATION INTERNATIONALE</h4><hr>
-                                    <h3>La filière s’inscrit-elle dans le cadre d'un projet de coopération internationale?</h3>
-                                    <h5 style="color:blue; margin-left:10px;">{{ $accreditation -> cooperation_internationale }}</h5>
-
-                                    <hr><h4 style="color:#3097d1;">COOPÉRATION NATIONALE</h4><hr>
-                                    <h3>La filière s’inscrit-elle dans le cadre d'un projet de coopération nationale?</h3>
-                                    <h5 style="color:blue; margin-left:10px;">{{ $accreditation -> cooperation_nationale }}</h5>
-
+                      <div class="row justify-content-center w-75 m-auto pb-2">
+                        <label class="pe-3 align-self-center mb-0 w-25">CONDITIONS D'ACCÈS : </label><input type="text" class="form-control w-50" value="{{ $accreditation -> conditions_acces }}" disabled>
+                      </div>
+                      <div class="row justify-content-center w-75 m-auto pb-2">
+                        <label class="pe-3 align-self-center mb-0 w-25">Préciser les critères de sélection : </label><input type="text" class="form-control w-50" value="{{ $accreditation -> criteres_selections2 }}" disabled>
+                      </div>
+                      <hr><h4 style="color:#3097d1;">OBJECTIFS, COMPÉTENCES ET DÉBOUCHÉS DE LA FORMATION</h4><hr>
+                      <div class="row justify-content-center w-75 m-auto pb-2">
+                        <label class="pe-3 align-self-center mb-0 w-25">OBJECTIFS DE LA FORMATION : </label><input type="text" class="form-control w-50" value="{{ $accreditation -> objectifs_formation }}" disabled>
+                      </div>
+                      <div class="row justify-content-center w-75 m-auto pb-2">
+                        <label class="pe-3 align-self-center mb-0 w-25">COMPÉTENCES À ACQUÉRIR : </label><input type="text" class="form-control w-50" value="{{ $accreditation -> competences }}" disabled>
+                      </div>
+                      <div class="row justify-content-center w-75 m-auto pb-2">
+                        <label class="pe-3 align-self-center mb-0 w-25">DÉBOUCHÉS DE LA FORMATION : </label><input type="text" class="form-control w-50" value="{{ $accreditation -> debouches_formation }}" disabled>
+                      </div>
+                      <div class="row justify-content-center w-75 m-auto pb-2">
+                        <label class="pe-3 align-self-center mb-0 w-25">ARTICULATION DE LA FILIÈRE AVEC LES AUTRES FORMATIONS : </label><input type="text" class="form-control w-50" value="{{ $accreditation -> articulation_filiere }}" disabled>
+                      </div>
+                      <hr><h4 style="color:#3097d1;">STRATÉGIES SECTORIELLES</h4><hr>
+                      <div class="row justify-content-center w-75 m-auto pb-2">
+                        <label class="pe-3 align-self-center mb-0 w-25">La filière s’inscrit-elle dans le cadre d’une stratégie nationale sectorielle ? : </label><input type="text" class="form-control w-50" value="{{ $accreditation -> strategies_sectorielles }}" disabled>
+                      </div>
+                      <hr><h4 style="color:#3097d1;">COOPÉRATION INTERNATIONALE</h4><hr>
+                      <div class="row justify-content-center w-75 m-auto pb-2">
+                        <label class="pe-3 align-self-center mb-0 w-25">La filière s’inscrit-elle dans le cadre d'un projet de coopération internationale ? : </label><input type="text" class="form-control w-50" value="{{ $accreditation -> cooperation_internationale }}" disabled>
+                      </div>
+                      <hr><h4 style="color:#3097d1;">COOPÉRATION NATIONALE</h4><hr>
+                      <div class="row justify-content-center w-75 m-auto pb-2">
+                        <label class="pe-3 align-self-center mb-0 w-25">La filière s’inscrit-elle dans le cadre d'un projet de coopération nationale ? : </label><input type="text" class="form-control w-50" value="{{ $accreditation -> cooperation_nationale }}" disabled>
+                      </div>
                                     <div>
                                         <div class="bottom-button">
                                             <button class="btn btn-success "><a href="{{route('Accreditation.accept',['id'=>$accreditation->id])}}" style="text-decoration: none; color: white;">accepter</a></button>

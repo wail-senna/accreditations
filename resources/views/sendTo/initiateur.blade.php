@@ -453,20 +453,23 @@ main{
               </div>
 
               <ul class="dropdown-menu">
-                  <li>
-                      <a href="{{ route('password.change') }}">Change Password</a>
-                  </li>
-                  <li>
-                      <a href="{{ route('logout') }}"
-                          onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
-                          Logout
-                      </a>
+                <li>
+                    <a href="{{ route('profile.index') }}">Profile</a>
+                </li>
+                <li>
+                    <a href="{{ route('password.change') }}">Change Password</a>
+                </li>
+                <li>
+                    <a href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                  document.getElementById('logout-form').submit();">
+                        Logout
+                    </a>
 
-                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                          {{ csrf_field() }}
-                      </form>
-                  </li>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
+                </li>
               </ul>
             </div>
             <!----><!---->
@@ -532,7 +535,7 @@ main{
 							<i class="fa fa-info-circle"></i>
 						</span>
 						<div class="desc">
-							<h3><a href="#">Guides d'utilisation</a></h3>
+							<h3><a href="initiateur/#">Guides d'utilisation</a></h3>
 							<p>Vous allez trouver ici les guides d'utilisation de cette plateforme qui gére la création des initiateurs et des coordonnateurs et qui gére les demandes d'accréditation.</p>
 						</div>
 					</div>
@@ -543,7 +546,7 @@ main{
 							<i class="fa fa-sticky-note-o"></i>
 						</span>
 						<div class="desc">
-							<h3><a href="#">Textes juridiques</a></h3>
+							<h3><a href="initiateur/#">Textes juridiques</a></h3>
 							<p>Vous allez trouver ici les textes juridiques privés et publics de l'Université Sidi Mohamed Ben Abdellah.</p>
 						</div>
 					</div>

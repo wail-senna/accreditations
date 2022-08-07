@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+/* use App\Enseignant; */
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
@@ -49,6 +50,7 @@ class AddCoordonController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
             'role_as' => 'required|string',
+            /* 'etablissement' => 'string', */
             'filiere' => 'string',
         ]);
     }
@@ -58,6 +60,7 @@ class AddCoordonController extends Controller
      *
      * @param  array  $data
      * @return \App\User
+     * @return \App\Enseignant
      */
     protected function create(Request $data)
     {
@@ -66,8 +69,14 @@ class AddCoordonController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
             'role_as' => $data['role_as'],
+            'etablissement' => $data['etablissement'],
             'filiere' => $data['filiere'],
         ]);
         return redirect('listCoordonnateurs');
     }
+    /* public function search(Request $request){
+        $search = $request ->get('search');
+        $ens=Enseignant::where('name','like','%'.$search.'%')->paginate(5);
+        return view('/sendTo.ajouter.addCoordonnateur',['enseignants'=>$ens]);
+    } */
 }

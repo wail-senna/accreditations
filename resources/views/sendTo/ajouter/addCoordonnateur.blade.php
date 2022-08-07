@@ -234,9 +234,10 @@
                             <label for="role_as" class="col-md-4 control-label">Role</label>
 
                             <div class="col-md-6">
-                            <select name="role_as" class="role">
+                            <!-- <select name="role_as" class="role">
                                 <option value="coordonnateur">Coordonnateur</option>
-                            </select>
+                            </select> -->
+                            <input id="role_as" name="role_as" type="text" value="coordonnateur" class="form-control" readonly>
                                 
                                 @if ($errors->has('role_as'))
                                     <span class="help-block">

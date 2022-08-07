@@ -441,15 +441,15 @@ h3.title{
             <h3 class="title"><i _ngcontent-kvg-c1="" class="fa fa-calendar"></i> CALENDRIER</h3>
             <div class="info">
                 <div class="text">La date limite de soumission des demandes d'accréditation pour les diplômes autres que le Bachelor et le Doctorat</div>
-                <div class="date">7 Avril 2021</div>
+                <div class="date">7 Avril 2022</div>
             </div>
             <div class="info">
                 <div class="text">La date limite de soumission des demandes d'accréditation pour le diplôme Bachelor</div>
-                <div class="date">20 mai 2021</div>
+                <div class="date">20 mai 2022</div>
             </div>
             <div class="info">
                 <div class="text">La date limite de soumission des demandes d'accréditation pour les formations doctorales</div>
-                <div class="date">31 mai 2021</div>
+                <div class="date">31 mai 2022</div>
             </div>
           </div>
     <main>

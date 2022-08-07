@@ -47,7 +47,7 @@
   <!-- End of Async Drift Code -->
 <style>
 .logo{
-    width: 220px;
+    width: 190px;
     float: left;
 }
 
@@ -113,7 +113,7 @@ a.navbar-brand{
 <body>
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
+            <div class="container flex-nowrap">
                 <div class="navbar-header">
 
                     <!-- Collapsed Hamburger -->
@@ -144,7 +144,7 @@ a.navbar-brand{
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    {{ Auth::user()->name }}
                                 </a>
 
                                 <ul class="dropdown-menu">
