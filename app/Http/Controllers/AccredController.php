@@ -115,7 +115,8 @@ class AccredController extends Controller
     
     public function search(Request $request){
         $search = $request ->get('search');
-        $accred=Accreditation::where('etat',null)->where('etablissement','like','%'.$search.'%')->paginate(5);
+        $accred=Accreditation::where('etat',null)->where(function($q) use ($search){
+            $q->where('id','like','%'.$search.'%')->orWhere('etablissement','like','%'.$search.'%')->orWhere('coordonnateur','like','%'.$search.'%')->orWhere('diplome','like','%'.$search.'%');})->paginate(5);
         return view('/sendTo.ajouter.listAccreditations',['accreditations'=>$accred]);
     }
 }

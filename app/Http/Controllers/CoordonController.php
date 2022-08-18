@@ -22,7 +22,8 @@ class CoordonController extends Controller
     
     public function search(Request $request){
         $search = $request ->get('search');
-        $coor=User::where('role_as', 'coordonnateur')->where('name','like','%'.$search.'%')->paginate(5);
+        $coor=User::where('role_as', 'coordonnateur')->where(function($q) use ($search){
+            $q->where('name','like','%'.$search.'%')->orWhere('email','like','%'.$search.'%')->orWhere('filiere','like','%'.$search.'%')->orWhere('created_at','like','%'.$search.'%');})->paginate(5);
         return view('/sendTo.ajouter.listCoordonnateurs',['coordonnateurs'=>$coor]);
     }
 }

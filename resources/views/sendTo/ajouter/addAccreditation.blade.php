@@ -44,8 +44,11 @@
                             <label for="coordonnateur" class="col-md-4 control-label">Coordonnateur de la filière</label>
 
                             <div class="col-md-6">
-                                <input id="coordonnateur" type="text" class="form-control" name="coordonnateur" value="{{ old('coordonnateur') }}" required autofocus>
-
+                                @if(Auth::user()->role_as =='coordonnateur')
+                                    <input id="coordonnateur" type="text" class="form-control" name="coordonnateur" value="{{ Auth::user()->name }}" readonly required autofocus>
+                                @else
+                                    <input id="coordonnateur" type="text" class="form-control" name="coordonnateur" value="{{ old('coordonnateur') }}" required autofocus>
+                                @endif
                                 @if ($errors->has('coordonnateur'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('coordonnateur') }}</strong>

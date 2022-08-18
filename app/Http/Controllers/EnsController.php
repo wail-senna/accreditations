@@ -65,7 +65,7 @@ class EnsController extends Controller
     
     public function search(Request $request){
         $search = $request ->get('search');
-        $ens=Enseignant::where('name','like','%'.$search.'%')->paginate(5);
+        $ens=Enseignant::where('name','like','%'.$search.'%')->orWhere('email','like','%'.$search.'%')->orWhere('universite','like','%'.$search.'%')->orWhere('etablissement','like','%'.$search.'%')->orWhere('filiere','like','%'.$search.'%')->paginate(5);
         return view('/sendTo.ajouter.listEnseignants',['enseignants'=>$ens]);
     }
 }

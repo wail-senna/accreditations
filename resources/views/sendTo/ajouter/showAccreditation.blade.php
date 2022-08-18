@@ -455,7 +455,7 @@ h3.title{
                 
                 
                 <div class="row">
-                    <div class="col-md-8 offset-md-2">
+                    <div class="col-md-12 offset-md-0">
                       <div class="row justify-content-center w-75 m-auto pb-2">
                         <label class="pe-3 align-self-center mb-0 w-25">Etablissement : </label><input type="text" class="form-control w-50" value="{{ $accreditation -> etablissement }}" disabled>
                       </div>

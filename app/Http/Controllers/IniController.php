@@ -22,7 +22,8 @@ class IniController extends Controller
     
     public function search(Request $request){
         $search = $request ->get('search');
-        $ini=User::where('role_as', 'initiateur')->where('name','like','%'.$search.'%')->paginate(5);
+        $ini=User::where('role_as', 'initiateur')->where(function($q) use ($search){
+            $q->where('name','like','%'.$search.'%')->orWhere('email','like','%'.$search.'%')->orWhere('etablissement','like','%'.$search.'%')->orWhere('created_at','like','%'.$search.'%');})->paginate(5);
         return view('/sendTo.ajouter.listInitiateurs',['initiateurs'=>$ini]);
     }
 }
