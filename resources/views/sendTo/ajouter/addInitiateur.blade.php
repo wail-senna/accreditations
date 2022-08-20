@@ -7,7 +7,7 @@
             <div class="panel panel-default">
                 <div class="title">
                     <h2>Ajouter Initiateur</h2>
-                    <h4>entrer les information suivantes pour créer un initiateur !</h4>
+                    <h4>Saisir les informations suivantes pour créer un initiateur !</h4>
                 </div>
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('Initiateur.create') }}">

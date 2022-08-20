@@ -422,7 +422,7 @@ and (orientation: portrait)
 							<i class="fa fa-info-circle"></i>
 						</span>
 						<div class="desc">
-							<h3><a href="/assets">Guides d'utilisation</a></h3>
+							<h3><a href="{{url('')}}">Guides d'utilisation</a></h3>
 							<p>Vous allez trouver ici les guides d'utilisation de cette plateforme qui gére la création des initiateurs et des coordonnateurs et qui gére les demandes d'accréditation.</p>
 						</div>
 					</div>

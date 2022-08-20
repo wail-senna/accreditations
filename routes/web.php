@@ -110,7 +110,7 @@ Route::post('/change-password','Auth\ChangePasswordController@changePassword')->
 
 Route::get('/profile','ProfileController@index')->name('profile.index');
 
-/* Route::get('/view/{is}','GuideController@index')->name('guide.index'); */
+Route::get('/view/{is}','GuideController@index')->name('guide.index'); 
 /*
 
 Route::get('/memberarea', function () {
